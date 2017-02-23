@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+ 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style/timesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	 <!--  // <script type="text/javascript" src= "jquery-1.10.2.js"></script> -->
+		
+
+		<script type="text/javascript" src="script/bootbox.min.js"></script> 
+ <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+
+	
+	  		
+	  		<script type="text/javascript" src= "jquery-ui.js"></script> 
+</head>
+<body onload="timesheetWeek()" >
+	<div id="main">
+		<div id="header">
+			<div id="head">
+				<h1 id="heading">TIME TRACKER</h1>
+				<center>
+					<h4 id="username"></h4>
+				</center>
+				
+
+
+			</div>
+			
+				<button type="button" class="btn btn-default"  id="reset-pass" >RESET PASSWORD</button>
+			
+
+
+
+			<div id="logout_div">
+
+			
+				<input type="button" value="LOGOUT" id="logout_button" onclick="logout()">
+				<div id="date"></div>
+			</div>
+
+		</div>
+
+		<div id="content">
+	<!-- 	<center>
+			Userid:<input type="text" id="userid">
+			<button onclick=" timesheetWeek()">OK</button>
+		</center> -->
+		<div id="reset">
+			<center>
+				Old Password: <input type="password" id="old-password"><br><br>
+				New Password: <input type="password" id="new-password"><br><br>
+				Confirm Password: <input type="password" id="confirm-password"><br><br>
+				<button type="button" class="btn btn-default" onclick="resetPassword()" id="Reset">RESET</button>
+			</center>
+			
+		</div>
+		
+
+
+			
+			<div id="button"> 
+				<button type="button" class="btn btn-default" onclick="getPreviousWeek()" id="button1"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+				<button type="button" class="btn btn-default" onclick="getnextWeek()" id="button2"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+				</button>
+			</div>
+			<!-- <div><input type="text" id="start_date"></div> -->
+			<center>
+				<div> 
+					Date:<input type="text" id="starttt"  placeholder="select date"> 
+					<button type="button" onclick="timesheetWeek1()">Show</button>
+				</div>
+			</center>
+						
+			
+			<div id="button_front"> 
+				
+			</div>
+
+
+			<div id="t1">
+				
+			
+
+			</button>
+			<table class="table table-bordered table-hover table-responsive" id="new_table">
+			    <thead>
+
+			    	 <tr bgcolor="#A3A3A1">
+						    	<th>Day</th>
+						    	<th id="date1">Date</th>
+						    	<th>TasKID</th>
+						    	<th>Task Details</th>
+						    	<th>Duration</th>
+						    	<th>Save</th>
+						    	<th>Delete</th>
+					 </tr>
+					  <tr id='mon'>
+					    <th>MONDAY <button type="button" class="btn btn-default" id="add" onclick="addAfter('mon','tue','th1')" name="save">
+							<i class="fa fa-plus-square" aria-hidden="true"></i></th>
+
+					    <th id="th1" value=""></th>
+						 
+							  
+							  
+							    	<td><select id="list1"></select></td>
+							    	<td><input type="text" id="taskname1"></td>
+							    	<td><input type="text" id="time1"></td>
+							    	<td><button type="button" class="btn btn-default" id="save1" onclick="saveTask('save1')" name="save">
+
+			      						<i class="fa fa-floppy-o" aria-hidden="true" ></i>
+										</button>
+										</td>
+									<td><button type="button" id="delete1" onclick="delete1(1)"><i class="fa fa-trash" aria-hidden="true"></i>
+										</button></td>
+							   
+					
+				    </tr>	
+				    <tr id='tue'>
+				    	<th>TUESDAY <button type="button" class="btn btn-default" id="add" onclick="addAfter('tue','wed','th2')" name="save">
+							<i class="fa fa-plus-square" aria-hidden="true"></i></th>
+				    	<th id="th2" value=""></th>
+				    	<td><select id="list2">	</select></td>
+			        		
+			        
+						<td><input type="text" id="taskname2"></td>
+						<td><input type="text" id="time2"></td>
+						<td><button type="button" class="btn btn-default" id="save2" onclick="saveTask('save2')" name="save">
+			      			<i class="fa fa-floppy-o" aria-hidden="true" ></i>
+						</button></td> 
+						<td><button type="button" id="delete2" onclick="delete1(2)"><i class="fa fa-trash" aria-hidden="true"></i>
+						</button></td>
+				    	
+				    </tr>
+
+				    <tr id='wed'>
+				    	<th>WEDNESDAY <button type="button" class="btn btn-default" id="add" onclick="addAfter('wed','thu','th3')" name="save">
+							<i class="fa fa-plus-square" aria-hidden="true"></i></th>
+				    	<th id="th3" value=""></th>
+				    	<td><select id="list3"></select></td>
+			        	
+			       		 
+						<td><input type="text" id="taskname3"></td>
+						<td><input type="text" id="time3"></td>
+						<td><button type="button" class="btn btn-default" id="save3" onclick="saveTask('save3')" name="save">
+			      			<i class="fa fa-floppy-o" aria-hidden="true" ></i>
+						</button></td>
+						<td><button type="button" id="delete3" onclick="delete1(3)"><i class="fa fa-trash" aria-hidden="true"></i>
+						</button></td>
+				    </tr>
+
+				    <tr id='thu'>
+				    	<th>THURSDAY <button type="button" class="btn btn-default" id="add" onclick="addAfter('thu','fri','th4')" name="save">
+							<i class="fa fa-plus-square" aria-hidden="true"></i></th>
+				    	<th id="th4"  value=""></th>
+					   	<td><select id="list4"></select></td>
+			        		
+			        	
+						<td><input type="text" id="taskname4"></td>
+						<td><input type="text" id="time4"></td>
+						<td><button type="button" class="btn btn-default" id="save4" onclick="saveTask('save4')" name="save">
+			      			<i class="fa fa-floppy-o" aria-hidden="true" ></i>
+						</button></td>
+						<td><button type="button" id="delete4" onclick="delete1(4)"><i class="fa fa-trash" aria-hidden="true"></i>
+						</button></td>	
+				    	
+				    </tr>
+
+				    <tr id='fri'>
+				    	<th>FRIDAY <button type="button" class="btn btn-default" id="add" onclick="addAfter('fri','nill','th5')" name="save">
+							<i class="fa fa-plus-square" aria-hidden="true"></i></th>
+				    	<th id="th5" value=""></th>
+				    	<td><select id="list5"></select></td>
+			        
+			        	
+						<td><input type="text" id="taskname5"></td>
+						<td><input type="text" id="time5"></td>
+						<td><button type="button" class="btn btn-default" id="save5" onclick="saveTask('save5')" name="save">
+			      			<i class="fa fa-floppy-o" aria-hidden="true" ></i>
+						</button></td>
+						<td><button type="button" id="delete5" onclick="delete1(5)"><i class="fa fa-trash" aria-hidden="true"></i>
+						</button></td>
+ 
+				    </tr>
+				   
+
+				   
+			    </thead>
+
+
+			    <tbody></tbody>
+			    </table>  		
+
+
+			   
+			<div id="field"></div>
+			
+		</div>
+	</div>
+	      <script>
+         $(function() {
+            $("#starttt").datepicker({
+               dateFormat:"dd-mm-yy",
+            });
+         });
+      </script>
+
+	<script type="text/javascript" src="script/bootbox.min.js"></script> 
+	<script type="text/javascript" src="script/timesheet.js"> </script>
+	<script type="text/javascript" src="script/editTask.js"></script>
+	<script type="text/javascript" src="script/logout.js"></script>
+	<script type="text/javascript" src="script/reset.js"></script>
+	<script type="text/javascript" src="script/delete.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--  	<link rel="stylesheet" type="text/css" href="style/adminView.css"> -->
+ 	<link rel="stylesheet" type="text/css" href="style/addTask.css">
+ 	<link rel="stylesheet" type="text/css" href="style/addEmployee.css">
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="head">
+				<h1 id="heading">TIME TRACKER</h1>
+
+			</div>
+			
+			<div id="logout_div">
+				<div id="username">ADMIN</div>
+				<input type="button" value="LOGOUT" id="logout_button" onclick="logout()">
+			</div>
+		</div>
+
+		<div id="content">
+			<ul id="list">
+				<li><a href="adminView.html">Employee details</a></li>
+				<li><a href="assignTask.html">Assign task</a></li>
+				<li><a href="addTask.html">Add task</a></li>
+				<li><a href="addEmployee.html">Add Employee</a></li>
+			</ul>
+
+				<center>
+					<div id="addEmployee">
+
+						<div class="form-group">
+	  						<label for="taskid" style="width:100% ;">EmployeeID:<input type="text" class="form-control" id="empid"></label>
+						</div>
+						<div class="form-group">
+	  						<label for="taskid" style="width:100% ;">Employee name:<input type="text" class="form-control" id="empname"></label>
+						</div>
+						<div class="form-group">
+	 						<label for="taskname" style="width:100% ;">EmailID:<input type="text" class="form-control" id="emailid"></label>
+						</div>
+
+						<div class="form-group">
+	  						<label for="taskid" style="width:100% ;">Password:<input type="text" class="form-control" id="password"></label>
+						</div>
+						<button type="button" class="btn btn-default" onclick="validation()" id="add">ADD</button>
+
+					</div>
+				</center>
+				
+			
+
+			
+		</div>	
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/bootbox.min.js"></script> 
+	<script type="text/javascript" src="script/addEmployee.js"></script>
+	<script type="text/javascript" src="script/logout.js"></script>
+</body>
+</html>

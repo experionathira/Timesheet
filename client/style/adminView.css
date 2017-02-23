@@ -1,0 +1,80 @@
+#main {
+	width: 100%;
+}
+
+#header {
+
+	background-color:  #4682B4;
+	padding: 30px;
+}
+
+#head {
+	width: 48%;
+	color: white;
+	display: inline-block;
+}
+
+#logout_div {
+	width: 48%;
+	display: inline-block;
+	
+}
+#username {
+	float: right;
+	color: white;
+}
+#logout_button {
+	
+	float: right;
+}
+#content {
+	width: 100%;
+}
+
+#addtask {
+	width: 30%;
+}
+#list {
+	
+	color: black;
+	background-color: #D3D3D3;
+	font-weight: bold;
+}
+
+
+
+li {
+	display: inline-block;
+	padding: 10px;
+	}
+
+a:hover{
+	background-color:#808080; 
+
+}
+
+#tablecontent tr:hover {
+    background-color: #AAD0F0;
+/*    color: #612181;*/
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+
+	#head {
+		width: 100%;
+		
+	}
+
+
+	#logout_div {
+		width: 100%;
+		
+	}
+
+	li {
+		padding: 4px;
+	}
+
+	#username {
+		margin-left: 293px;
+	}
+}

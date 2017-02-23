@@ -1,0 +1,116 @@
+#main {
+	width: 100%;
+}
+
+#header {
+
+	background-color:  #4682B4;
+	padding: 30px;
+}
+
+#head {
+	width: 48%;
+	color: white;
+	display: inline-block;
+}
+
+#logout_div {
+	/*width: 48%;*/
+	display: inline-block;
+	margin-left: 220px;
+}
+#username {
+	float: right;
+	color: white;
+}
+#logout_button {
+	
+	float: right;
+}
+#content {
+	width: 100%;
+	margin-top: 50px;
+}
+
+#button2 {
+	float: right;
+	background-color: #4682B4;
+	color: white;
+
+}
+
+#button1 {
+	float: left;
+	background-color: #4682B4;
+	color: white;
+}
+
+#save_button {
+	background-color: #4682B4;
+	color: white;
+	
+}
+
+#date {
+	color: white;
+	float: right;
+	margin-left: 52px;
+	margin-right: 30px;
+}
+
+#reset-pass {
+	float: right;
+	margin-top: 20px;
+}
+
+#reset {
+	display: none;
+}
+
+#Reset {
+	background-color: #4682B4 !important; 
+	color: white !important;
+}
+
+#add {
+	float: right;
+}
+
+
+
+/*#mon,#tue,#wed,#thu, #fri{
+	text-align: center;
+}*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+
+	 h1 {
+	 	text-align: center;
+	 }
+	#head {
+		width: 100%;
+		
+	}
+
+	#logout_div {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+
+	#username {
+		float: none;
+			
+	}
+
+	#t1 {
+		  overflow-x: auto;
+	}
+	#new_table {
+		-webkit-overflow-scrolling: touch;
+		
+	}
+
+	#date1 {
+		  padding-right: 50px;
+	}
+}

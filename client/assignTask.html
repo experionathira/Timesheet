@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="style/assignTask.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body onload="getTask()">
+	<div id="main">
+		<div id="header">
+			<div id="head">
+				<h1 id="heading">TIME TRACKER</h1>
+
+			</div>
+			
+			<div id="logout_div">
+				<div id="username">ADMIN</div>
+				<input type="button" value="LOGOUT" id="logout_button" onclick="logout()">
+			</div>
+		</div>
+
+		<div id="content">
+			<ul id="list">
+				<li><a href="adminView.html">Employee details</a></li>
+				<li><a href="assignTask.html">Assign task</a></li>
+				<li><a href="addTask.html">Add task</a></li>
+				<li><a href="addEmployee.html">Add Employee</a></li>
+			</ul>
+
+			<center>
+					<div id="assigntask" style="width:100% ;">
+
+						<!-- <div class="form-group">
+	  						<label for="empid">Employee ID:<input type="text" class="form-control" id="empid"></label>
+						</div> -->
+						Employee ID: <br><br>
+						<select id="empid">
+							<option>Select</option> 
+						</select><br> <br>
+						<!-- <div class="form-group">
+	 						<label for="empname">Employee name:<input type="text" class="form-control" id="empname"></label>
+						</div> -->
+						TaskID:<br><br>
+						<select id="list1">
+							<option>Select</option>
+						</select>
+
+ 						<br>
+ 						<br>
+ 						<br>
+
+						<button type="button" class="btn btn-default"  id='assign' onclick="validation()">ASSIGN</button>
+
+
+
+
+					</div>
+				</center>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/bootbox.min.js"></script> 
+	<script type="text/javascript" src="script/assignTask.js"></script>
+	<script type="text/javascript" src="script/getTask.js"></script>
+	<script type="text/javascript" src="script/logout.js"></script>
+
+</body>
+</html>

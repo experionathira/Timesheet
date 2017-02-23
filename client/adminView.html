@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="style/adminView.css">
+ 	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css"> 
+ 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"> 
+
+ 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+</head>
+<body onload="adminView()">
+	<div id="main">
+		<div id="header">
+			<div id="head">
+				<h1 id="heading">TIME TRACKER</h1>
+
+			</div>
+			
+			<div id="logout_div">
+				<div id="username">ADMIN</div>
+				<input type="button" value="LOGOUT" id="logout_button" onclick="logout()">
+			</div>
+
+		</div>
+
+		<div id="content">
+			<ul id="list">
+				<li><a href="#">Employee details</a></li>
+				<li><a href="assignTask.html">Assign task</a></li>
+				<li><a href="addTask.html">Add task</a></li>
+				<li><a href="addEmployee.html">Add Employee</a></li>
+			</ul>
+
+
+		</div>
+
+		<div id="tablecontent"></div>
+		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/bootbox.min.js"></script>
+	 
+  	<script type="text/javascript" src="script/adminView.js"></script>
+
+  	<script type="text/javascript" src="script/logout.js"></script>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+
+
+</body>
+</html>
